@@ -1,6 +1,12 @@
 module.exports = function(eleventyConfig) {
+
+    eleventyConfig.addPassthroughCopy('./src/style.css');
+    eleventyConfig.addPassthroughCopy('./src/assets');
+
     return {
-        input: "views",
-        output: ""
+        dir: {
+            input: "src",
+            output: "public"
+        }
     };
 }
